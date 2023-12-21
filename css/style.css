@@ -907,14 +907,14 @@ body {
   content: "";
   width: clamp(3.125rem, 1.607rem + 4.76vw, 5rem);
   height: clamp(3.125rem, 1.607rem + 4.76vw, 5rem);
-  background: url("../../img/main/novelty/star.svg") 0 0/100% no-repeat;
+  background: url("../img/main/novelty/star.svg") 0 0/100% no-repeat;
 }
 @media (max-width: 690px) {
   .novelty__title {
     font-size: clamp(1.5rem, 0.438rem + 3.33vw, 1.875rem);
   }
   .novelty__title::before {
-    background: url("../../img/main/novelty/star-small.svg") 0 0/100% no-repeat;
+    background: url("../img/main/novelty/star-small.svg") 0 0/100% no-repeat;
   }
 }
 .novelty__text {
