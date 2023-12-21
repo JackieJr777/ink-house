@@ -1,0 +1,206 @@
+/* =====================================footer======================================== */
+.footer {
+  background-color: $secondaryBgColor;
+  padding: clamp(1.25rem, 1.177rem + 0.37vw, 1.438rem) 0; // от 23 до 20 на 1140 до 320
+  // .footer__container
+  &__container {
+  }
+  // .footer__body
+  &__body {
+    display: flex;
+    // align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 -15px;
+    row-gap: 35px;
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+    }
+  }
+  // .footer__item
+  &__item {
+    padding: 0 15px;
+    // .footer__item_info
+    &_info {
+      @media (max-width: $mobile) {
+        flex: 1 1 100%;
+      }
+    }
+    // .footer__item_menu
+    &_menu {
+      flex: 1 1 auto;
+    }
+    // .footer__item_socials
+    &_socials {
+    }
+    @media (max-width: 600px) {
+      flex: 1 1 100%;
+    }
+  }
+}
+.info-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  max-width: 170px;
+  @media (max-width: $mobile) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: none;
+  }
+  @media (max-width: 425px) {
+    justify-content: center;
+  }
+  
+  // .info-item__logo
+  &__logo {
+    flex: 0 0 143px;
+    img {
+      max-width: 100%;
+    }
+  }
+  // .info-item__phone
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    & > *:not(:last-child) {
+      margin: 0 0 8px;
+    }
+    @media (max-width: 425px) {
+      flex: 1 1 100%;
+      align-items: center;
+    }
+  }
+  // .info-item__tel
+  &__tel { 
+    font-size: clamp(1rem, 0.902rem + 0.49vw, 1.25rem); // от 20 до 16 на 1140 до 320
+    transition: all 0.5s ease 0s;
+    animation-name: phone;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes phone {
+      0% {
+        transform: scale(1) rotate(0deg);
+      }
+      100% {
+        transform: scale(1.3) rotate(3deg) ;
+      }
+    }
+  }
+  // .info-item__desc
+  &__desc {
+    color: $secondaryTextColor;
+    font-size: clamp(1rem, 0.899rem + 0.32vw, 1.125rem); // от 18 до 16 на 1140 до 510
+  }
+}
+
+
+
+.menu-item {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: clamp(2.813rem, 1.135rem + 3.49vw, 3.625rem); // от 58 до 45 на 1140 до 768
+  row-gap: 25px;
+  padding: 0 0 0 clamp(0rem, -14.839rem + 30.91vw, 7.188rem); // от 115 до 0 на 1140 до 768
+  @media (max-width: 600px) {
+    justify-content: space-around;
+  }
+  // .menu-item__column
+  &__column {
+    max-width: 130px;
+  }
+  // .menu-item__title
+  &__title {
+    font-size: clamp(1rem, 0.902rem + 0.49vw, 1.25rem); // от 20 до 16 на 1140 до 320
+    &:not(:last-child) {
+      margin: 0 0 6px;
+    }
+  }
+  // .menu-item__list
+  &__list {
+  }
+}
+.list-footer {
+  // .list-footer__item
+  &__item {
+    &:not(:last-child) {
+      margin: 0 0 6px;
+    }
+  }
+  // .list-footer__link
+  &__link {
+    font-size: clamp(1rem, 0.899rem + 0.32vw, 1.125rem); // от 18 до 16 на 1140 до 510
+    color: $secondaryTextColor;
+    line-height: 1.5; /* 27px */
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.socials-item {
+  // display: flex;
+  // flex-direction: column;
+  // .socials-item__links
+  max-width: 133px;
+  & > *:not(:last-child) {
+    margin: 0 0 10px;
+  }
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: none;
+  }
+  &__links {
+    display: flex;
+    // column-gap: 30px;
+    & > *:not(:last-child) {
+      margin: 0 30px 0 0;
+    }
+  }
+  // .socials-item__link
+  &__link {
+    flex: 0 0 24px;
+    min-width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+    img {
+      max-width: 100%;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+  // .socials-item__copy
+  &__copy {
+    color: $secondaryTextColor;
+    font-size: 12px;
+    line-height: 1.2; /* 14.4px */
+    & > *:not(:last-child) {
+      margin: 0 0 6px;
+    }
+    @media (max-width: 600px) {
+      display: flex;
+      gap: 5px;
+    }
+  }
+}
+
+/* ===================================/footer========================================= */
